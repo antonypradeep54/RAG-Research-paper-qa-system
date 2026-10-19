@@ -10,7 +10,7 @@ Research papers often contain valuable insights, but extracting relevant informa
 
 This project demonstrates how Retrieval-Augmented Generation (RAG) can be used to transform research papers into an intelligent knowledge base that supports conversational question answering.
 
-The system automatically retrieves research papers from arXiv, processes and chunks document content, generates embeddings, stores them in a FAISS vector database, and uses LLMs to generate accurate and context-aware responses.
+The notebook demonstrates retrieving research papers from arXiv, processing and chunking document content, generating embeddings, storing them in a FAISS vector database, and using an LLM to answer questions with retrieved context. Responses can still be incomplete or incorrect and should be checked against the source papers.
 
 ---
 
@@ -82,8 +82,8 @@ Generated Answer
 ### Retrieval-Augmented Generation
 
 * Context-aware answer generation
-* Reduced hallucinations
-* Grounded responses using retrieved content
+* Uses retrieved document passages as context for generated answers
+* Supports checking answers against retrieved content; it does not guarantee that responses are correct or eliminate hallucinations
 
 ### Comparative Evaluation
 
@@ -114,19 +114,11 @@ Generated Answer
 rag-research-paper-qa-system/
 │
 ├── README.md
-├── requirements.txt
+├── Requirements.txt
 ├── LICENSE
 ├── .gitignore
 │
-├── notebooks/
-│   └── Capstone_Project_Research_Paper_Question_&_Answer_Bot.ipynb
-│
-├── images/
-│   ├── architecture.png
-│   ├── sample-query.png
-│   └── sample-response.png
-│
-└── data/
+└── Capstone_Project_Research_Paper_Question_&_Answer_Bot.ipynb
 ```
 
 ---
@@ -136,14 +128,14 @@ rag-research-paper-qa-system/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/antonypradeep54/rag-research-paper-qa-system.git
-cd rag-research-paper-qa-system
+git clone https://github.com/antonypradeep54/RAG-Research-paper-qa-system.git
+cd RAG-Research-paper-qa-system
 ```
 
 ### Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r Requirements.txt
 ```
 
 ### Configure Environment Variables
